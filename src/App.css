@@ -2,37 +2,202 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: Cako;
+  src: url("./fonts/Cako-Regular.ttf");
+}
+@font-face {
+  font-family: Helsinki-Black;
+  src: url("./fonts/HelsinkiXXL-Black.ttf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.landing {
+  height: 100vh;
+  width: 100%;
+  /* background: rgb(253, 73, 8); */
+  overflow: hidden;
+  background: rgb(245, 106, 90);
+}
+.box {
+  height: 65vh;
+  width: 60vh;
+  position: relative;
+  left: 50%;
+  top: 18%;
+  transform: translateX(-50%) translateY(18%);
+  box-shadow: 0 5px 10px 0 black, 0 8px 25px 0 black;
+
+}
+.cover {
+  height: 65vh;
+  width: 60vh;  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.title {
+  font-family: Helsinki-Black, "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  color: rgb(255, 255, 100);
+  position: absolute;
+  top: 5%;
+  left: 48%;
+  transform: translateX(-48%);
+  text-align: center;
+}
+
+.title span {
+  font-size: 25vh;
+  line-height: 135px;
+  letter-spacing: 10px;
+}
+
+.action {
+  position: absolute;
+  left: 50%;
+  top: 78%;
+  transform: translateX(-50%);
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+}
+.action h3 {
+  color:black;
+  padding: 2%;
+  width: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3vh;
 }
 
-.App-link {
-  color: #61dafb;
+.button {
+  padding: 2%;
+  color: black;
+  background: rgb(253, 253, 87);
+  border-radius: 2px;
+  text-decoration: none;
+  position: relative;
+  left: 30%;
+  transform: translateX(-30%);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info {
+  padding-top: 5%;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  left: 39%;
+  transform: translateX(-39%);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
 }
+.info:hover {
+  text-decoration: underline;
+}
+.results-container {
+  min-height: 110vh;
+  width: 100%;
+}
+
+.content {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top:3%;
+  padding-bottom: 5%;
+}
+
+.content h1 {
+  font-family: Helsinki-Black, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 10px;
+  font-size: 15vh;
+  color: rgb(245, 106, 90);
+}
+
+.content button {
+  padding: 1%;
+  background-color: rgb(250, 250, 101);
+  border: none;
+  margin: 1%;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750px;
+}
+
+.grid img {
+  height: 250px;
+  width: 250px;
+}
+/* 
+============================================================
+About
+============================================================
+ */
+
+ .about-wrapper {
+   background:rgb(245, 106, 90);
+   width: 100%;
+
+ }
+
+ .first {
+   background:rgb(245, 106, 90);
+   margin-left: 5%;
+   padding: 1%;
+   min-height:100vh
+ }
+
+ .first h1 {
+   font-family: Helsinki-Black;
+   font-size: 16vh;
+   letter-spacing: 8px;
+   color: black
+ }
+
+ .first h2 {
+   font-size: 9vh;
+   font-family: 'Montserrat', sans-serif;
+   width:80%;
+   padding: 1%;
+   position: relative;
+   top: 30%;
+   color:rgb(255, 255, 77);
+   z-index: 2;
+ }
+
+ .first h3 {
+   font-size: 5vh;
+   font-family: 'Montserrat', sans-serif;
+   color:black;
+   width: 50%;
+  position: relative;
+ }
+
+ .return-home{
+   color:rgb(255, 255, 100);
+   text-decoration: none;
+   font-size: 4vh;
+   font-family: 'Montserrat', sans-serif;
+   padding-top: 2%;
+   
+
+ }
+.about-image {
+ position: relative;
+ left: 100%;
+ top: 60%;
+ transform: translateX(-100%) translateY(60%);
+ width:75vh;
+ box-shadow: 0 5px 10px 0 black, 0 8px 25px 0 black;
+
+
+
+}
+

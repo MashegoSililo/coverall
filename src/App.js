@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./App.css";
+import six from "./images/six.jpeg";
 
-function App() {
+// Authorization Link
+export const authEndpoint = "https://accounts.spotify.com/authorize?";
+// Authorization Variables
+const clientId = '';
+const redirectUri = "http://localhost:3000/result";
+const scopes = ["user-read-private", "user-read-email", "user-top-read"];
+
+export const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <div className="landing">
+      <section>
+        <div className="box">
+          <img className="cover" src={six} alt={six}></img>
+        </div>
+
+        <div className="title">
+          <span>COVER</span>
+          <span>WALL</span>
+        </div>
+      </section>
+      <div className="action">
+        <h3>Generate an album cover collage from your top spotify albums.</h3>
+        <br></br>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          className="button"
+          href={`${authEndpoint}client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
+            "%20"
+          )}&response_type=token&show_dialog=true`}
         >
-          Learn React
+          Login to Spotify to Generate
         </a>
-      </header>
+        <br></br>
+        <br></br>
+
+        <Link to="/about" className="info">
+          What is this ?
+        </Link>
+      </div>
+      <div style={{ display: "none" }}>
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+
