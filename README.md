@@ -1,4 +1,4 @@
-# coverall
+# coverwall
 
 <h3>A Spotify App that generates an album cover wallpaper made up of a users top albums on Spotify.</h3>
 <h3>What are the technologies used?  </h3>
